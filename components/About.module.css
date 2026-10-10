@@ -1,0 +1,46 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 6rem);
+}
+
+.aboutCopy > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  line-height: 1.95;
+}
+
+.moreButton {
+  display: inline-flex;
+  min-height: 46px;
+  margin-top: 1.6rem;
+  padding: 0.65rem 1rem;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 10px;
+  background: var(--gradient);
+  color: var(--text);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.moreButton:hover {
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.24);
+  transform: translateY(-2px);
+}
+
+.skillsReveal {
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}
